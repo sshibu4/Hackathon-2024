@@ -1,0 +1,116 @@
+.title-word {
+  animation: color-animation 4s linear infinite;
+}
+
+.title-word-1 {
+  --color-1: #FF6347;
+  /* Tomato */
+  --color-2: #FFD700;
+  /* Gold */
+  --color-3: #00CED1;
+  /* Dark Turquoise */
+}
+
+.title-word-2 {
+  --color-1: #FFA07A;
+  /* Light Salmon */
+  --color-2: #6A5ACD;
+  /* Slate Blue */
+  --color-3: #FFD700;
+  /* Gold */
+}
+
+.title-word-3 {
+  --color-1: #20B2AA;
+  /* Light Sea Green */
+  --color-2: #FF69B4;
+  /* Hot Pink */
+  --color-3: #00FF7F;
+  /* Spring Green */
+}
+
+.title-word-4 {
+  --color-1: #FF4500;
+  /* Orange Red */
+  --color-2: #00BFFF;
+  /* Deep Sky Blue */
+  --color-3: #FFD700;
+  /* Gold */
+}
+
+
+@keyframes color-animation {
+  0% {
+    color: var(--color-1)
+  }
+
+  32% {
+    color: var(--color-1)
+  }
+
+  33% {
+    color: var(--color-2)
+  }
+
+  65% {
+    color: var(--color-2)
+  }
+
+  66% {
+    color: var(--color-3)
+  }
+
+  99% {
+    color: var(--color-3)
+  }
+
+  100% {
+    color: var(--color-1)
+  }
+}
+
+/* Here are just some visual styles. 🖌 */
+
+
+
+.title {
+
+  font-weight: 800;
+  font-size: 8.5vw;
+
+}
+
+
+.container {
+  height: 100%;
+  background-image: url(../bg.jpg);
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column; // Aligns children (your p and .options div) in a column
+  justify-content: center; // Centers children vertically in the container
+  align-items: center; // Centers children horizontally in the container
+  background-attachment: fixed;
+
+  .title {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-size: 2rem; // Larger font size for the title
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column; // Stacks buttons vertically
+    width: 100%; // Sets the width to be full width of the parent
+    max-width: 320px; // Sets a max-width to prevent buttons from becoming too wide
+
+    button {
+      background-image: linear-gradient(to right top, #8e6bd1, #8978d8, #8484de, #828fe2, #829ae5, #78a7ee, #6fb3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+      width: 350px; // Full width of the .options div
+      margin: 30px 0; // Adds space between buttons
+      border: 0.5px solid black;
+      border-radius: 25px;
+      height: 100px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+    }
+  }
+}
